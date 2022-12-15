@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+    <!-- bootstrap 5 cdn css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- bootstrap 5 cdn js bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  </head>
+  <style>
+  body{ 
+  background-image:url("photo_5332264364444598970_y.jpg");
+    background-size: 1600px 650px;
+   background-repeat: no-repeat;
+   margin: 0;
+  }
+
+  #scroll_top {
+	display: none;
+	position: fixed;
+	bottom: 110px;
+	right: 25px;
+	z-index: 1000;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px 1px black;
+}
+#scroll_top:hover {
+ 	opacity: 1;
+}
+#text {
+	width: 356px;
+	display: inline-block;
+}
+  </style>
+
+  <body>
+    <!-- ready navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.jpg" alt="Logo" style="width:40px;" class="rounded-pill">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <div class="fs-4">Amantay Merey</div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Profile
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">About me</a></li>
+                <li><a class="dropdown-item" href="#">My projects</a></li>
+                <li><hr class="dropdown-divider"></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <a href="#"> <img class="img1" src="DS8awSCW4AIcLvq.png" alt="photo" id="scroll_top" title="Наверх"></a>
+
+    <div class="container">
+    <div class="row g-2">
+        <div class="col-6">
+          <div class="p-5 "><img src="орхидея.jpg"  style="width:60%;" class="mx-auto d-block "></div>
+        </div>
+      
+        <div class="col-6">
+          <div class="p-5 ">  <img src="orchid2.jpg"  style="width:60%;" class="mx-auto d-block"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="row">
+      <img src="орхидея.jpg"  style="width:22%;" class="mx-auto d-block  pt-2 ">
+      <img src="orchid1.jpg"  style="width:22%;" class="mx-auto d-block pt-2">
+      <img src="orchid2.jpg"  style="width:22%;" class="mx-auto d-block pt-2">
+    </div> -->
+    <div class="accordion accordion-flush mt-1" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed bg-light fst-italic" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            About flower
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse bg-primary" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <p>Orchids, or orchids, also Orchids (Latin Orchidaceae) are the largest family of monocotyledonous plants. More than 10% of the representatives of the family are characterized by CAM photosynthesis.The name <span class="fw-bold" >"orchid" </span> comes from the other-Greek. ὄρχις — testicle (human or other mammal) because of the shape of the rhizome.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed bg-light fst-italic" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            The structure 
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse bg-primary" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">          
+          <p>The leaves of orchids are simple and regular.
+
+          Flowers, as a rule, are collected in racemes or spike-shaped inflorescences, rarely single flowers (Venus slipper, cattleya). The flowers are three-membered, with a double perianth. The sepals are the same, and of the three petals, the middle (morphologically upper) is very different from the rest, forming a lip. The lip often has a long outgrowth back, filled with nectar, — a spur. Since the "lip down" position is most convenient for pollination, in terrestrial orchids, twisting (resupination) of the flower occurs during development. Epiphytic orchids with overhanging inflorescences do not require resupination[6].</p>
+        </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed bg-light fst-italic" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Uses
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse bg-primary" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"> 
+          <ul>
+            <li class="fw-bold">Perfumery</li>
+            <p>The scent of orchids is frequently analysed by perfumers (using headspace technology and gas-liquid chromatography/mass spectrometry) to identify potential fragrance chemicals</p>
+            <li class="fw-bold">Horticulture</li>
+            <p>Orchids of all types have also often been sought by collectors of both species and hybrids. Many hundreds of societies and clubs worldwide have been established. These can be small, local clubs, or larger, national organisations such as the American Orchid Society. Both serve to encourage cultivation and collection of orchids, but some go further by concentrating on conservation or research.</p>
+            <li class="fw-bold">Food</li>
+            <p>Some saprophytic orchid species of the group Gastrodia produce potato-like tubers and were consumed as food by native peoples in Australia and can be successfully cultivated, notably Gastrodia sesamoides. Wild stands of these plants can still be found in the same areas as early Aboriginal settlements, such as Ku-ring-gai Chase National Park in Australia. Aboriginal peoples located the plants in habitat by observing where bandicoots had scratched in search of the tubers after detecting the plants underground by scent</p>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+    <button style="margin-left:45%;text-align: center; background-color:floralwhite;border:2px rgb(5, 3, 94) dashed" onclick="addContact()">Add contact</button>
+    <div style="margin-left:42%; width:200px; border: 0.5px black dashed; background-color:rgb(129, 142, 197);text-align: center;" id="contakty">
+    </div>
+ 
+    <script>
+       function addContact(){
+      let name = prompt('Enter information about you!');
+      let div = document.createElement('div')
+      div.innerHTML=name
+      div.classList.add('contact')
+      // document.body.appendChild(div)
+      document.getElementById('contakty').appendChild(div)
+
+    }
+      // let x = document.getElementById("numb").value;
+  // If x is Not a Number or less than one or greater than 10
+ 
+
+    
+
+    
+    $(function(){
+	$(window).scroll(function(){
+		if($(window).scrollTop() > 10) {
+			$('#scroll_top').show();
+		} else {
+			$('#scroll_top').hide();
+		}
+	});
+ 
+	// $('#scroll_top').click(function(){
+	// 	$('html, body').animate({scrollTop: 0}, 600);
+	// 	return false;
+	// });
+});
+    
+  </script>
+    <footer class=" text-center text-white">
+    <div class="mt-4">
+      <!-- <div class="fixed-bottom"> -->
+      <div class="row bg-secondary  p-3 ms-0 col-sm-12 text-center ">
+        <div class="col-sm">
+          <a class="text-light  text-decoration-none ps-5  " href="lab3.html">Home</a>
+        </div>
+        <div class="col-sm">
+          <a class="text-light  text-decoration-none ps-5" href="about.html">About Us</a>
+        </div>
+        <div class="col-sm">
+        <a class="text-light text-decoration-none ps-5" href=contacts.html>Contacts</a>
+      </div>
+    </div>
+ 
+
+    <div class="  text-center pt-1 pb-1 mb-0 bg-dark">
+      <p class="text-white col-md">2022 all <span class="text-danger"> rights</span> not reserved</p>
+    </div></footer>
+  </div>
+</div>
+  </body>
+</html>
