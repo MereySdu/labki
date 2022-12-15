@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+     </head> 
+     <style>
+@import url("httpss://fonts.googleapis.com/css?family=Roboto");
+body {
+    background: linear-gradient(to right, #ad81d6 0%, #79aabd 50%, #964e84 99%);
+}
+.signup-form {
+    font-family: "Roboto", sans-serif;
+    width: 600px;
+    height: 300px;
+    margin: 200px auto;
+    background: linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+    border-radius: 10px;
+}
+.form-header {
+    background-color: #eff0f1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.form-header h1 {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(182, 181, 126);
+    padding: 20px 0;
+    border-bottom: 1px solid #cccccc;
+}
+.form-body {
+    padding: 10px 40px;
+    color: #666;
+}
+.form-group {
+    margin-bottom: 10px;
+
+}
+.form-body .label-title {
+    color: #581bba;
+    font-size: 15px;
+    font-weight: bold;
+}
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 50%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
+.horizontal-group .left {
+    float: left;
+    width: 49%;
+}
+.horizontal-group .right {
+    float: right;
+    width: 49%;
+}
+.form-footer {
+    clear: both;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c6a8ee;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    color: #bcd5f5;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #ebabf3;
+    color: white;
+}
+</style>
+<body>
+    <form class="signup-form" onsubmit="login(event)" action="#" method="post">
+    <div class="form-header">
+   
+        <h1>Log In Page</h1>
+    </div>
+        <div class="form-body">
+    
+            <div class="form-group left">
+                <label for="name" class="label-title">Full name</label>
+                <input type="text" id="name" class="form-input" required="required" />
+            </div>
+            
+       
+    
+       
+        <div class="horizontal-group">
+            <div class="form-group left">
+                <label for="password" class="label-title">Password </label>
+                <input type="password" id="password" class="form-input"  required="required" />
+            </div>
+        </div>
+        <div class="form-footer">
+            <button type="submit"  class="btn">Log In<button></div>
+            </form>
+        </div>
+        <script>
+            function login(event){
+                event.preventDefault();
+
+                let form = event.target;
+                let formdata = new FormData (form);
+           
+
+        // turn it into readable object
+        let form_data_obj = Object.fromEntries(formdata)
+        
+        console.log(form_data_obj);
+
+        localStorage.setItem('name', form_data_obj.name)
+        localStorage.setItem('password',form_data_obj.password)
+
+
+                fetch('http://localhost/index.php',{
+                    method:'post',
+                    body:formdata
+                })
+                .then(result=>{
+
+                    // if we want this data to be text
+                    return result.text()
+                    
+                    // if we want this data to be JSON
+                    // return result.json()
+                    
+                })
+                .then(final_result=>{
+                    console.log(final_result);
+                })
+            }
+        </script>
+</body>
+</html>
+  <!-- <style>
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 360px; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Sign Up</h2>
+        <p>Please fill this form to create an account.</p>
+        <form action="
+        <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
+        " method="post">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            </div>    
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
+                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="reset" class="btn btn-secondary ml-2" value="Reset">
+            </div>
+            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+        </form>
+    </div>     -->
