@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+     </head> 
+     <style>
+@import url("httpss://fonts.googleapis.com/css?family=Roboto");
+body {
+    background: linear-gradient(to right, #ad81d6 0%, #79aabd 50%, #964e84 99%);
+}
+.signup-form {
+    font-family: "Roboto", sans-serif;
+    width: 800px;
+    margin: 20px auto;
+    background: linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+    border-radius: 10px;
+}
+.form-header {
+    background-color: #eff0f1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.form-header h1 {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(182, 181, 126);
+    padding: 20px 0;
+    border-bottom: 1px solid #cccccc;
+}
+.form-body {
+    padding: 10px 40px;
+    color: #666;
+}
+.form-group {
+    margin-bottom: 10px;
+
+}
+.form-body .label-title {
+    color: #581bba;
+    font-size: 15px;
+    font-weight: bold;
+}
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
+.horizontal-group .left {
+    float: left;
+    width: 49%;
+}
+.horizontal-group .right {
+    float: right;
+    width: 49%;
+}
+input[type="file"] {
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+
+.signup-form .form-footer {
+    background-color: #eff0f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 40px;
+    text-align: right;
+    border-top: 1px solid #cccccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c6a8ee;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    color: #bcd5f5;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #ebabf3;
+    color: white;
+}
+.form-footer {
+    clear: both;
+}
+
+     </style> 
+     <body>
+      
+        <form class="signup-form" onsubmit="onSubmit(event)" action="login.html" method="post">
+             
+    <div class="form-header">
+   
+    <h1>Registration Page</h1>
+</div>
+    <div class="form-body">
+
+        <div class="form-group left">
+            <label for="name" class="label-title">Full name</label>
+            <input type="text" id="name" class="form-input" required="required" />
+        </div>
+        
+   
+    <div class="form-group">
+        <label for="email" class="label-title">Email</label>
+        <input type="email" id="email" class="form-input" required="required" />
+    </div>
+   
+    <div class="horizontal-group">
+        <div class="form-group left">
+            <label for="password" class="label-title">Password </label>
+            <input type="password" id="password" class="form-input"  required="required" />
+        </div>
+    </div>
+    <div class="horizontal-group">
+        <div style="margin-left:12px ;" class="form-group left">
+            <label class="label-title">Gender:</label>
+            <div class="input-group">
+                <label for="male"> <input type="radio" name="gender" value="male" id="male" /> Male</label>
+                <label for="female"> <input type="radio" name="gender" value="female" id="female" /> Female</label>
+            </div>
+        </div>
+
+    <div class="horizontal-group">
+            <div style="margin-left:12px ;" class="form-group left">
+        <label for="localdate" class="label-title">Date of birth </label>
+        <input type="datetime-local" id="localdate" name="date"/>
+            </div>
+        </div>
+        <div class="form-group right">
+            <label class="label-title">Country of birth</label>
+            <div>
+                <label> <input type="checkbox" >Kazakhstan</label>
+                <label> <input type="checkbox" >Kyrgyzstan</label>
+                <label> <input type="checkbox" >Russia</label>
+                <label> <input type="checkbox">Japan</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="label-title">Favorite Color</label>
+        <select id="colors"  size="2">
+          <option value="black">black</option>
+          <option value="white">white</option>
+          <option value="yellow">yellow</option>
+          <option value="blue">blue</option>
+          <option value="other">other</option>
+        </select>
+    </div>
+    <div class="horizontal-group">
+        <div class="form-group left">
+            <label for="choose-file" class="label-title">Upload Image</label>
+            <input type="file" id="choose-file"  size="80" />
+        </div>
+       
+   
+    <div class="form-group">
+        <textarea class="form-input" placeholder="Favorite car" rows="4" cols="50" style="height: auto;"></textarea>
+    </div>
+</div>
+    </div>
+    <div class="form-footer"></span>
+        <button type="submit"  class="btn">Sign Up<button></div>
+        
+        </form>
+        <script>
+        const name = document.getElementById("name");
+           name.addEventListener("input", function (event) {
+           if (name.value.length < 2 || name.value.length > 20) {
+           name.setCustomValidity("Name length should be more than 2 and less than 21");
+           } else {
+           name.setCustomValidity("");
+           }
+           });
+
+           const email = document.getElementById("mail");
+           mail.addEventListener("input", function (event) {
+           if (email.validity.typeMismatch) {
+           email.setCustomValidity("I am expecting an e-mail address!");
+           } else {
+           email.setCustomValidity("");
+           }
+           });
+          
+              
+              
+           const password = document.getElementById("password");
+           password.addEventListener("input", function (event) {
+           if (password.length<8 ) {
+           password.setCustomValidity("Your password must include at least 8 characters");
+           } else {
+           password.setCustomValidity("");
+           }
+           });
+                 
+
+       function save(){
+        console.log(localStorage.getItem('name'))
+        console.log(localStorage.getItem('password'))
+
+        console.log(localStorage.getItem('email'))
+      }
+
+         
+            </script>
+     </body>
+</html>
